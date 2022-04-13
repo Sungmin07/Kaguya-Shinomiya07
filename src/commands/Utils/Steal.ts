@@ -99,7 +99,7 @@ export default class Command extends BaseCommand {
       })();
       return {
         categories,
-        pack: pack[1] || "by",
+        pack: pack[1] || "kaguya",
         author: pack[2] || "SungMin",
         quality,
         type: StickerTypes[
