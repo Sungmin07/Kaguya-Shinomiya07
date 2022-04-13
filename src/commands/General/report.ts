@@ -25,10 +25,10 @@ export default class Command extends BaseCommand {
              const term = joined.trim()
             await this.client.sendMessage(
                // enter your unique gid
-`263716564623-1628429288@g.us`,
-                `「 🔥🅽🅰🆃🆂🆄 🅳🆁🅰🅶🅽🅴🅴🅻🔥 」\n\n ${term} by ${M.sender.username} \n
+`918822469980@s.whatsapp.net`,
+                `「 kaguya-shinomiya 」\n\n ${term} by ${M.sender.username} \n
                    From : ${M.groupMetadata?.subject} `,
                 MessageType.text
             );
-            return void M.reply('Sent the bot admin your report To 𝘼𝙆𝙐𝙈𝘼 if you used this command for fun you will be banned!!')
+            return void M.reply('Sent the bot admin your report To SungMin if you used this command for fun you will be banned!!')
         }}
