@@ -1,6 +1,6 @@
 /** @format */
 
-import { MessageType } from "@adiwajshing/baileys";
+import { MessageType, Mimetype } from "@adiwajshing/baileys";
 import MessageHandler from "../../Handlers/MessageHandler";
 import BaseCommand from "../../lib/BaseCommand";
 import WAClient from "../../lib/WAClient";
@@ -17,7 +17,7 @@ export default class Command extends BaseCommand {
 			dm: true,
 			usage: `${client.config.prefix}bc`,
 			modsOnly: true,
-			baseXp: 0,
+			baseXp: 20000,
 		});
 	}
 
@@ -28,11 +28,16 @@ export default class Command extends BaseCommand {
 		if (!joined)
 			return void (await M.reply(`Please provide the Broadcast Message.`));
 		const term = joined.trim();
-		const images = [
-			"https://c.tenor.com/_8Yhn1O5qDgAAAPo/natsu-dragneel-smile.mp4",
-			"https://c.tenor.com/m9ipnIinnLIAAAPo/fairy-tail-natsu-dragneel.mp4",
+		const gifs = [
+			"https://c.tenor.com/2t5_yT1rASwAAAPo/kaguya-sama-manga.mp4",
+			"https://c.tenor.com/5Cnfne03_qIAAAPo/shakes-kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen.mp4",
+			"https://c.tenor.com/z5BnPO_0ArwAAAPo/kaguya-sama-love-is-war-kaguya-shinomiya.mp4",
+			"https://c.tenor.com/whzIT6_OtIQAAAPo/kaguya-anime.mp4",
+			"https://c.tenor.com/WzaIC9WHmogAAAPo/triggered-triggered-kaguya.mp4",
+			"https://c.tenor.com/piN6MS0IDyEAAAPo/kaguya.mp4",
+			"https://c.tenor.com/U9waxnLe8-YAAAPo/kaguya-shinomiya.mp4",
 		];
-		const selected = images[Math.floor(Math.random() * images.length)];
+		const selected = gifs[Math.floor(Math.random() * gifs.length)];
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		const chats: any = this.client.chats
 			.all()
@@ -41,14 +46,15 @@ export default class Command extends BaseCommand {
 			.map((jids) => (jids.includes("g.us") ? jids : null))
 			.filter((v) => v);
 		for (let i = 0; i < chats.length; i++) {
-			const text = `*🔥「 NATSU BROADCAST 」🔥*\n\n${term}\n\n Regards ~ *${M.sender.username}*`;
-			this.client.sendMessage(chats[i], { url: selected }, MessageType.image, {
+			const text = `*💕「SHINOMIYA BROADCAST」💕*\n\n${term}\n\n Regards ~ *${M.sender.username}*`;
+			this.client.sendMessage(chats[i], { url: selected }, MessageType.video, {
+				mimetype: Mimetype.gif,
 				caption: `${text}`,
 				contextInfo: {
 					mentionedJid: M.groupMetadata?.participants.map((user) => user.jid),
 				},
 			});
 		}
-		await M.reply(`🔥 Broadcast Message sent to *${chats.length} groups*.`);
+		await M.reply(`✅ Broadcast Message sent to *${chats.length} groups*.`);
 	};
 }
