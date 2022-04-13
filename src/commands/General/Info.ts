@@ -41,7 +41,7 @@ export default class Command extends BaseCommand {
 		}
 		this.run = async (M: typings.ISimplifiedMessage): Promise<void> => {
 			const chitoge =
-				"https://telegra.ph/file/9e1e035be514052e12eeb.mp4";
+				"https://c.tenor.com/En4UUUVQ7UUAAAPo/kaguya-sama-love-is-war.mp4";
 			return void this.client.sendMessage(
 				M.from,
 				{ url: chitoge },
@@ -49,9 +49,9 @@ export default class Command extends BaseCommand {
 				{
 					quoted: M.WAMessage,
 					mimetype: Mimetype.gif,
-					caption: `━━━❰ 🐲 *𝙉𝘼𝙏𝙎𝙐* 🐲 ❱━━━\n\n🔮 *Groups: ${
+					caption: `━━━❰ 🍭 *kaguya-shinomiya* 🍭❱━━━\n\n🔮 *Groups: ${
 				chats.length
-					}\n\n🚦 *Uptime: ${uptime()}*\n\n🐉 *My cute people: ${users}*\n\n\n💢 *Banned Users: ${uban}*\n\n\n`,
+					}\n\n🚦 *Uptime: ${uptime()}*\n\n💕 *My cute people: ${users}*\n\n\n💢 *Banned Users: ${uban}*\n\n\n`,
 				}
 			);
 		};
