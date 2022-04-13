@@ -32,8 +32,8 @@ if ((data as { error: string }).error) return void (await M.reply('Sorry, couldn
 const b = `${data.results?.[Math.floor(Math.random() * data.results.length)]?.media[0]?.mp4?.url}`
 
         const sticker: any = await new Sticker(b, {
-			pack: "sticker",
-			author: "𝙇𝙤𝙧𝙙 𝙎𝙖𝙫𝙖𝙜𝙚 ⚡ 𝑳𝒐𝒓𝒅 𝑺𝒂𝒗𝒂𝒈𝒆 ⚡",
+			pack: "kaguya-shinomiya",
+			author: "Sungmin ⚡",
 			quality: 90,
 			type: "crop",
 			categories: ["🎊"],
