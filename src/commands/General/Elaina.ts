@@ -9,19 +9,17 @@ import { ISimplifiedMessage } from "../../typings";
 export default class Command extends BaseCommand {
 	constructor(client: WAClient, handler: MessageHandler) {
 		super(client, handler, {
-			command: "Natsu",
-			aliases:['ela'],
+			command: "shinomiya",
 			description: "Displays the info",
 			category: "general",
-			usage: `${client.config.prefix}chitoge`,
-                        modsOnly:true,
+			usage: `${client.config.prefix}shinomiya`,
 			baseXp: 200,
 		});
 	}
 
 	run = async (M: ISimplifiedMessage): Promise<void> => {
 		const chitoge =
-			"https://telegra.ph/file/913ab3710227ee3917bf1.mp4";
+			"https://c.tenor.com/T0UHeAi26mEAAAPo/kaguya-shinomiya.mp4";
 		return void this.client.sendMessage(
 			M.from,
 			{ url: chitoge },
@@ -29,7 +27,7 @@ export default class Command extends BaseCommand {
 			{
 				quoted: M.WAMessage,
 				mimetype: Mimetype.gif,
-				caption: `🔥 *Natsu* 🎊\n\n🔥 *Description: A WhatsApp Bot With Rich Creation Features.*\n\n🌐 *URL: https://github.com/akumasugi/Savage.git* \n\n 📒 *Guide: https://github.com/akumasugi/Savage.git* \n`,
+				caption: `💕 *shinomiya* 💕\n\n🍀 *Description: A WhatsApp Bot developed by *Sungmin*. \n`,
 			}
 		);
 	};
