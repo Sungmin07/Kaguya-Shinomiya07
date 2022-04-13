@@ -8,7 +8,7 @@ import { ISimplifiedMessage } from '../../typings'
 export default class Command extends BaseCommand {
     constructor(client: WAClient, handler: MessageHandler) {
         super(client, handler, {
-            command: 'akuma',
+            command: 'sungmin',
             description: 'Displays info about akuma.',
             category: 'general',
             usage: `${client.config.prefix}savage`
@@ -22,16 +22,16 @@ export default class Command extends BaseCommand {
         let rin = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url: rin }, MessageType.image, {quoted:M.WAMessage,
             mimetype: Mimetype.jpeg,
-            caption: `🔥𝙃𝙀𝙇𝙇𝙊!❄️I'm 𝘼𝙆𝙐𝙈𝘼 an ordinary guy who loves watching anime & play games🎮. I'm a BCA Student🤍relationship with 𝙕𝙀𝙍𝙊❤️  
+            caption: `🔥𝙃𝙀𝙇𝙇𝙊!❄️I'm Sungmin an wholesomeguy who is handsome af , loves watching anime & likes programming and business stuffs . I am just a ordinary human being with wholesome extraordinary talent❤️  
             
 🍀𝙒𝙝𝙖𝙩𝙨𝘼𝙥𝙥;
-Wa.me/+917892202052
+Wa.me/+918822469980
 
 🍀𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆;
-https://facebook.com/groups/600441174428472/
+I don't use facebook lol🐦
  
 🍀𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈;
-https://www.instagram.com/akuma__24/?hl=en
+https://www.instagram.com/animequotendious
 
 ⪼𝖲𝖾𝖾 𝗒𝖺𝗁 💟` }
         )
