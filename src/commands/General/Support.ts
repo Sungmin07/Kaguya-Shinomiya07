@@ -19,14 +19,11 @@ export default class Command extends BaseCommand {
     run = async (M: ISimplifiedMessage): Promise<void> => {
         (await this.client.sendMessage(
         M.sender.jid,
-        `    🔥MY MASTER GROUPS🔥
-        
-       *🔥NATSU support:🔥* *https://chat.whatsapp.com/H6aIaXmMLglGL7VnekVYDG:*
-        *🔥support🔥* FACEBOOK GROUP🎉:*https://facebook.com/groups/600441174428472/*`,
+        `    ♥️MY MASTER GROUP♥️\n\n*🎇SHINOMIYA support:🎇* *https://chat.whatsapp.com/G89MF8YbNPt2zOdF6HItyD*\n\n*💫 OFFICIAL ANIME FANDOM (FUNGROUP)💫*:*https://chat.whatsapp.com/HgYwKuHrzX0Ig9nexk8dBh*`,
            MessageType.text
         ))
         const n = [
-            'https://telegra.ph/file/4b83e7424a8182285d13e.mp4'
+            'https://c.tenor.com/JYUMoI4c5cwAAAPo/shinomiya-kaguya.mp4'
         ]
         let beckylynch = n[Math.floor(Math.random() * n.length)]
         return void this.client.sendMessage(M.from, { url:beckylynch }, MessageType.video, {quoted:M.WAMessage,
